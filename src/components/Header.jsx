@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useGlobalContext } from "../store/UserContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -19,11 +19,18 @@ function Header() {
   }, [pathname]);
 
   const handleSignout = () => {
-    setSelectedUserDetails({});
     setModalOpen(false);
+    setSelectedUserDetails({});
     navigate("/");
   };
 
+  useEffect(() => {
+    setModalOpen(false);
+
+    return () => {};
+  }, [pathname]);
+
+  console.log(modalOpen);
   return (
     <div className="header__container">
       <div className="nav__section">
