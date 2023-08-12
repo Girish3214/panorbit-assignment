@@ -1,0 +1,108 @@
+.header__container {
+  width: 65%;
+  position: absolute;
+  height: 10vh;
+  top: 2rem;
+  padding: 2rem 0.5rem 1rem;
+
+  border-bottom: 1px solid lightgray;
+}
+
+.nav__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title__section {
+  color: #545454;
+}
+
+.profile__section {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+.profile__section > img {
+  margin-right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  border-radius: 50%;
+}
+
+.profile__section h6 {
+  color: #737373;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.user__details {
+  position: absolute;
+  top: 3.5rem;
+
+  width: 100%;
+  min-height: 28vh;
+
+  border-radius: 1rem;
+  background-color: #fff;
+
+  box-shadow: 0 0 20px 3px lightgray;
+
+  padding: 1rem;
+}
+
+.modal__user--details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+}
+
+.modal__user--details > img {
+  width: 6rem;
+  height: 6rem;
+
+  border-radius: 50%;
+}
+
+.modal__user--details h6 {
+  color: #737373;
+  margin: 1rem 0;
+}
+
+.modal__user--details p {
+  color: #a2a2a2;
+  margin: 0 0 1rem;
+}
+
+.signout__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 1rem 0;
+}
+
+.signout__container > button {
+  outline: none;
+  border: none;
+
+  padding: 1rem;
+
+  background-color: #d55151;
+  color: #fff;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  border-radius: 2rem;
+
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+.comingsoon__container {
+  font-size: 6rem;
+  font-weight: 700;
+
+  color: var(--color-light);
+
+  text-align: center;
+}
