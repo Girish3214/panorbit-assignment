@@ -43,7 +43,6 @@ const UserProvider = ({ children }) => {
   );
 
   const setSelectedUserDetails = useCallback((user) => {
-    console.log(user);
     setSelectedUser(user);
   }, []);
 
@@ -51,7 +50,6 @@ const UserProvider = ({ children }) => {
     setLoading(true);
     if (usersData.length === 0) {
       try {
-        console.log("called..");
         const response = await axios.get(GET_USERS);
         if (response.status === 200) {
           const { data } = response;

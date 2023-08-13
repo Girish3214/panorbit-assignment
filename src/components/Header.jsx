@@ -30,7 +30,6 @@ function Header() {
     return () => {};
   }, [pathname]);
 
-  console.log(modalOpen);
   return (
     <div className="header__container">
       <div className="nav__section">
