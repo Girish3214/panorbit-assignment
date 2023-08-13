@@ -53,6 +53,8 @@
   box-shadow: 0 0 20px 3px lightgray;
 
   padding: 1rem;
+
+  z-index: 3;
 }
 
 .modal__user--details {
