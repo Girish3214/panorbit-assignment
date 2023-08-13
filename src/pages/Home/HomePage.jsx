@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "../components/Container";
-import Wave1 from "../assets/svg/wave1.svg";
-import Wave2 from "../assets/svg/wave2.svg";
+import Container from "../../components/Container";
+import Wave1 from "../../assets/svg/wave1.svg";
+import Wave2 from "../../assets/svg/wave2.svg";
 
-import "../styles/homePage.css";
-import { useGlobalContext } from "../store/UserContext";
+import "./homePage.css";
+import { useGlobalContext } from "../../store/UserContext";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {

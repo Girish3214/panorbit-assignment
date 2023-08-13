@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/chat.css";
+import "../assets/styles/chat.css";
 import { useGlobalContext } from "../store/UserContext";
 
 import ChatIcon from "../assets/icons/message.png";

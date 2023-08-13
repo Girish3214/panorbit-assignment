@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import ComingSoonPage from "../pages/ComingSoonPage";
-import ProfilePage from "../pages/ProfilePage";
+import HomePage from "../pages/Home/HomePage";
+import ComingSoonPage from "../pages/ComingSoon/ComingSoonPage";
+import ProfilePage from "../pages/Profile/ProfilePage";
 
 function RouterComponent() {
   return (

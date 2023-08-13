@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/sidebar.css";
+import "../assets/styles/sidebar.css";
 
 import Arrow from "../assets/icons/next.png";
 import { useGlobalContext } from "../store/UserContext";

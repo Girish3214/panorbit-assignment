@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useGlobalContext } from "../store/UserContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import "../styles/header.css";
+import "../assets/styles/header.css";
 function Header() {
   const { pathname } = useLocation();
 

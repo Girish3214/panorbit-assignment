@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import Container from "../components/Container";
-import { useGlobalContext } from "../store/UserContext";
+import Container from "../../components/Container";
+import { useGlobalContext } from "../../store/UserContext";
 import { useNavigate } from "react-router-dom";
 
-import "../styles/profilePage.css";
-import GMap from "../components/GMap";
+import "./profilePage.css";
+import GMap from "../../components/GMap";
 function ProfilePage() {
   const navigate = useNavigate();
   const { selectedUser } = useGlobalContext();

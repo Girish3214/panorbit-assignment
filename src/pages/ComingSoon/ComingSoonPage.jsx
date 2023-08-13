@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/comingSoon.css";
-import Container from "../components/Container";
+import "./comingSoon.css";
+import Container from "../../components/Container";
 
 function ComingSoonPage() {
   return (
