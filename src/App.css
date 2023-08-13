@@ -30,3 +30,22 @@
   display: flex;
   flex-direction: column;
 }
+
+.leaflet-control-attribution .leaflet-control {
+  display: none !important;
+}
+
+.location__details {
+  display: flex;
+  gap: 1rem;
+
+  color: #9a9a9a;
+
+  margin-top: 1rem;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.location__details b {
+  color: var(--color-name);
+}

@@ -4,6 +4,7 @@ import { useGlobalContext } from "../store/UserContext";
 import { useNavigate } from "react-router-dom";
 
 import "../styles/profilePage.css";
+import GMap from "../components/GMap";
 function ProfilePage() {
   const navigate = useNavigate();
   const { selectedUser } = useGlobalContext();
@@ -106,7 +107,9 @@ function ProfilePage() {
               </p>
             </div>
           </div>
-          <div className="map__container"></div>
+          <div className="map__container">
+            <GMap location={selectedUser?.address?.geo} />
+          </div>
         </div>
       </div>
     </Container>
