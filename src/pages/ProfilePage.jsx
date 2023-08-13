@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/profilePage.css";
 import GMap from "../components/GMap";
-import Userbox from "../components/Userbox";
 function ProfilePage() {
   const navigate = useNavigate();
   const { selectedUser } = useGlobalContext();
@@ -115,9 +114,6 @@ function ProfilePage() {
             <GMap location={selectedUser?.address?.geo} />
           </div>
         </div>
-      </div>
-      <div className="users__chat__container">
-        <Userbox />
       </div>
     </Container>
   );
