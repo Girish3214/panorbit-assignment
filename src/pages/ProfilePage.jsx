@@ -5,12 +5,16 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/profilePage.css";
 import GMap from "../components/GMap";
+import Userbox from "../components/Userbox";
 function ProfilePage() {
   const navigate = useNavigate();
   const { selectedUser } = useGlobalContext();
 
   useEffect(() => {
-    if (Object.entries(selectedUser).length === 0) {
+    if (
+      Object.entries(selectedUser).length === 0 &&
+      !sessionStorage.getItem("user")
+    ) {
       navigate("/");
       return;
     }
@@ -31,25 +35,25 @@ function ProfilePage() {
                 <b>
                   <span>Username</span>:
                 </b>
-                {selectedUser?.username ?? ""}
+                <span>{selectedUser?.username ?? ""}</span>
               </p>
               <p>
                 <b>
                   <span>e-mail</span>:
                 </b>
-                {selectedUser?.email ?? ""}
+                <span>{selectedUser?.email ?? ""}</span>
               </p>
               <p>
                 <b>
                   <span>Phone</span>:
                 </b>
-                {selectedUser?.phone?.split(" ")[0] ?? ""}
+                <span>{selectedUser?.phone?.split(" ")[0] ?? ""}</span>
               </p>
               <p>
                 <b>
                   <span>Website</span>:
                 </b>
-                {selectedUser?.website ?? ""}
+                <span>{selectedUser?.website ?? ""}</span>
               </p>
             </div>
           </div>
@@ -60,19 +64,19 @@ function ProfilePage() {
                 <b>
                   <span>Name</span>:
                 </b>
-                {selectedUser?.company?.name ?? ""}
+                <span>{selectedUser?.company?.name ?? ""}</span>
               </p>
               <p>
                 <b>
                   <span>catchphrase</span>:
                 </b>
-                {selectedUser?.company?.catchPhrase ?? ""}
+                <span>{selectedUser?.company?.catchPhrase ?? ""}</span>
               </p>
               <p>
                 <b>
                   <span>bs</span>:
                 </b>
-                {selectedUser?.company?.bs ?? ""}
+                <span>{selectedUser?.company?.bs ?? ""}</span>
               </p>
             </div>
           </div>
@@ -111,6 +115,9 @@ function ProfilePage() {
             <GMap location={selectedUser?.address?.geo} />
           </div>
         </div>
+      </div>
+      <div className="users__chat__container">
+        <Userbox />
       </div>
     </Container>
   );

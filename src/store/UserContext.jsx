@@ -44,6 +44,11 @@ const UserProvider = ({ children }) => {
 
   const setSelectedUserDetails = useCallback((user) => {
     setSelectedUser(user);
+    if (Object.keys(user).length === 0) {
+      sessionStorage.clear();
+      return;
+    }
+    sessionStorage.setItem("user", JSON.stringify(user));
   }, []);
 
   const getUsers = async () => {
@@ -68,6 +73,15 @@ const UserProvider = ({ children }) => {
   };
   useEffect(() => {
     getUsers();
+
+    if (
+      Object.keys(selectedUser).length === 0 &&
+      sessionStorage.getItem("user")
+    ) {
+      console.log("called...");
+      const user = JSON.parse(sessionStorage.getItem("user"));
+      setSelectedUserDetails(user);
+    }
 
     return () => {};
   }, []);

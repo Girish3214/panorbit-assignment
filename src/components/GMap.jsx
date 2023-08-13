@@ -10,7 +10,6 @@ function GMap({ location }) {
     }
     return [0, 0];
   }, [location]);
-  console.log(location);
   return (
     <div>
       <MapContainer

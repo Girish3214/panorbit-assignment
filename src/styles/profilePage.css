@@ -65,6 +65,13 @@
   color: #9a9a9a;
 }
 
+.profile__user__details > p > span,
+.user__company__details > p > span,
+.user__address__details > p > span {
+  min-width: 10rem;
+  max-width: 15rem;
+}
+
 .profile__user__details > p > b > span,
 .user__company__details > p > b > span,
 .user__address__details > p > b > span {
