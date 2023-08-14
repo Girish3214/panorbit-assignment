@@ -28,7 +28,7 @@ This repository contains a React project initialized with Vite, a fast build too
    ```bash
    npm run dev
 
-5. To run the project open below link:
+5. After above step to run the project in brower open below link:
 
   >[Local server](http://localhost:5173/)
 
