@@ -13,12 +13,6 @@ function App() {
   const { loading, selectedChatUser } = useGlobalContext();
 
   const { pathname } = useLocation();
-  console.log(
-    selectedChatUser,
-    Object.keys(selectedChatUser).length !== 0,
-    pathname,
-    pathname !== "/"
-  );
   return (
     <div className="main__page">
       {loading && <Spinner />}
